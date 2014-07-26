@@ -1,4 +1,4 @@
-# [RampRate Info](http://roots.io/)
+# [IPMM](http://roots.io/)
 
 [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
 

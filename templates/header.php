@@ -16,7 +16,16 @@
         if (has_nav_menu('primary_navigation')) :
           wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav navbar-nav navbar-left'));
         endif;
-      ?>
+
+      if( get_field('social_icons_in_topnav', 'options') )
+      {
+      get_template_part('templates/content', 'social-icons');
+      } else {
+
+      }
+
+      if( get_field('navbar_right', 'options') )
+      { ?>
       <div class="hidden-xs nav navbar-nav navbar-right">
         <?php if ( is_user_logged_in() ) { ?>
           <div><a class="btn btn-primary" href="#">Admin</a></div>
@@ -24,6 +33,9 @@
           <div><a class="btn btn-primary" href="#">Login</a></div>
         <?php } ?>
       </div>
+      <?php } else { ?>
+
+      <?php } ?>
     </nav>
   </div>
 </header>
